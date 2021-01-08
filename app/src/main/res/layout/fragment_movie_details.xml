@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.likhtman.imdbfavouritemovies.fragments.MovieDetailsFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_movie_manual"
+            android:textSize="20dp"
+            android:id="@+id/addManul" />
+
+        <LinearLayout
+            android:id="@+id/nameLayout"
+            android:layout_below="@id/addManul"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_toLeftOf="@+id/nameText"
+                android:layout_toStartOf="@+id/nameText"
+                android:layout_gravity="center_vertical"
+                android:textSize="12dp"
+                android:id="@+id/myMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_name" />
+
+            <EditText
+                android:layout_weight="5"
+                android:maxLines="1"
+                android:lines="1"
+                android:textSize="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/myMovie"
+                android:layout_toEndOf="@+id/myMovie"
+                android:layout_toLeftOf="@+id/checkSeen"
+                android:layout_toStartOf="@+id/checkSeen"
+                android:id="@+id/nameText" />
+
+            <CheckBox
+                android:text="@string/seen"
+                android:id="@+id/checkSeen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/plotLayout"
+            android:layout_below="@id/nameLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_toLeftOf="@+id/plotText"
+                android:layout_toStartOf="@+id/plotText"
+                android:layout_gravity="center_vertical"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_plot"/>
+
+            <EditText
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:textSize="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:lines="3"
+                android:id="@+id/plotText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateLayout"
+            android:layout_below="@id/plotLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_toLeftOf="@+id/dateText"
+                android:layout_toStartOf="@+id/dateText"
+                android:layout_gravity="center_vertical"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_date"/>
+
+            <EditText
+                android:textSize="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:id="@+id/dateText"
+                android:enabled="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rateLayout"
+            android:layout_below="@id/dateLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_toLeftOf="@+id/buttonsLayout"
+                android:layout_toStartOf="@+id/buttonsLayout"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_rate"/>
+
+            <RatingBar
+                android:isIndicator="false"
+                android:numStars="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_below="@+id/buttonsLayout"
+                style="?android:attr/ratingBarStyleSmall"/>
+
+            <TextView
+                android:id="@+id/txtRatingValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/urlLayout"
+            android:layout_below="@id/rateLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_toLeftOf="@+id/urlText"
+                android:layout_toStartOf="@+id/urlText"
+                android:layout_gravity="center_vertical"
+                android:textSize="12dp"
+                android:id="@+id/urlHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_url"/>
+
+
+
+            <EditText
+                android:singleLine="true"
+                android:ellipsize="start"
+                android:scrollHorizontally="true"
+                android:textSize="12dp"
+                android:layout_toRightOf="@+id/urlHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/urlText" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_below="@id/urlLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:layout_toLeftOf="@+id/btnAddPhoto"
+                android:layout_toStartOf="@+id/btnAddPhoto"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addOneMovieBtn"
+                android:enabled="false" />
+
+            <Button
+                android:layout_toLeftOf="@+id/showUrlbutton"
+                android:layout_toStartOf="@+id/showUrlbutton"
+                android:textSize="12dp"
+                android:id="@+id/btnAddPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/take_a_photo"/>
+
+            <Button
+                android:textSize="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show_movie_url"
+                android:enabled="false"
+                android:id="@+id/showUrlbutton" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_below="@id/buttonsLayout"
+            android:id="@+id/myPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</FrameLayout>

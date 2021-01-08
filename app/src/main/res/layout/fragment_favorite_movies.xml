@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.likhtman.imdbfavouritemovies.fragments.FavoriteMoviesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/SortLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:hint="@string/enter_search_word"
+                android:layout_toLeftOf="@+id/btnSortByName"
+                android:layout_toStartOf="@+id/btnSortByName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/myStr" />
+
+            <Button
+                android:text="@string/by_name"
+                android:layout_toLeftOf="@+id/btnSortByYear"
+                android:layout_toStartOf="@+id/btnSortByYear"
+                android:layout_gravity="right"
+                android:id="@+id/btnSortByName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="@string/by_year"
+                android:layout_gravity="right"
+                android:id="@+id/btnSortByYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearbutton">
+
+            <ImageButton
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/addbutton"
+                android:id="@+id/addbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_fav"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/SortLayout"
+            android:layout_above="@id/linearbutton" />
+
+    </RelativeLayout>
+
+</FrameLayout>

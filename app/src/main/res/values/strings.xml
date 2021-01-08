@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">ImdbFavouriteMovies</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_search_word">Enter search word</string>
+    <string name="by_name">By name</string>
+    <string name="by_year">By year</string>
+    <string name="add_manual">Add Manual</string>
+    <string name="add_from_internet">Add From Internet</string>
+    <string name="search_movie_from_internet">Search Movie From Internet</string>
+    <string name="search">Search</string>
+    <string name="cancel_search">Cancel Search</string>
+    <string name="add_movie_frominternet">Add Movie From Internet</string>
+
+
+    <string name="title_activity_add_movies">AddMoviesActivity</string>
+    <string name="addMovieManual">Add Movie Manual</string>
+    <string name="Seen">Seen</string>
+    <string name="moviePlot">Movie Plot</string>
+    <string name="movieDate">* Release Year</string>
+    <string name="movieRate">Movie Rate</string>
+    <string name="movieUrl">Movie Url</string>
+    <string name="showMovieUrl">Show Picture</string>
+    <string name="cancelEditLayout">Cancel</string>
+    <string name="addMovieFromInternet">Add Movie From Internet</string>
+    <string name="searchMovieFromInternet">Search</string>
+    <string name="btnSearch">Search</string>
+    <string name="btnCancelSearch">Cancel Search</string>
+    <string name="movieCollection">Movie Collection</string>
+    <string name="yourChoiseText">Your Choise</string>
+    <string name="btnAddManual">Add Manual</string>
+    <string name="btnAddFromInternet">Add From Internet</string>
+    <string name="takeAPhoto">Take A Picture</string>
+    <string name="cancelPicture">Cancel</string>
+    <string name="addDuplicatedMovie">Add Movie</string>
+    <string name="dontDuplicatedMovie">Do Not Add Movie</string>
+    <string name="moviename">*Movie Name</string>
+
+
+    <string name="edit_movie">Edit Movie</string>
+    <string name="delete_movie">Delete Movie</string>
+    <string name="change_language">Change Language</string>
+    <string name="english">English</string>
+    <string name="hebrew">Hebrew</string>
+    <string name="exit_application">Exit Application</string>
+    <string name="delete_movies">Delete Movies</string>
+
+
+    <string name="add_movie_manual">Add Movie Manual</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="seen">Seen</string>
+    <string name="movie_plot">Movie Plot</string>
+    <string name="movie_date">Movie Date</string>
+    <string name="movie_rate">Movie Rate</string>
+    <string name="movie_url">Movie Url</string>
+    <string name="take_a_photo">Take A Photo</string>
+    <string name="show_movie_url">Show Movie Url</string>
+
+    <string name="add_movie">Add Movie</string>
+    <string name="remove_movie">Delete Movie</string>
+    <string name="update_movie">Edit Movie</string>
+</resources>
